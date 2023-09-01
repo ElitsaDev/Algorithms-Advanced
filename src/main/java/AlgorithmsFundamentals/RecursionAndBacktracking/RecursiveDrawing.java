@@ -16,16 +16,17 @@ public class RecursiveDrawing {
         }
 
         //Pre-action
-        for (int i = 0; i < n ; i++) {
-            System.out.print("*");
-        }
-        System.out.println();
+        drawRowWithSymbols(n, "*");
 
         drawingFigure(n - 1);
 
         //Post-action
-        for (int i = 0; i < n ; i++) {
-            System.out.print("#");
+        drawRowWithSymbols(n, "#");
+    }
+
+    private static void drawRowWithSymbols(int n, String s) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(s);
         }
         System.out.println();
     }
